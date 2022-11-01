@@ -71,7 +71,7 @@ class TurmasRepository private constructor() {
         auth.signOut()
     }
 
-    private fun getCurrentUser() = auth.currentUser
+    fun getCurrentUser() = auth.currentUser
 
 
     fun isLoggedIn() : Boolean {
