@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "861951300903",
+    "project_id": "turma-firebase",
+    "storage_bucket": "turma-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:861951300903:android:3322f95f5e98f487950502",
+        "android_client_info": {
+          "package_name": "br.edu.infnet.turmafirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "861951300903-p7lvpbpph32dci12hc8qfhu63lqam1fu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAk5NVmWnOfmHX6AT2S87y_fJ0FJEKtPR0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "861951300903-p7lvpbpph32dci12hc8qfhu63lqam1fu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
