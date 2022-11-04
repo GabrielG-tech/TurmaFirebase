@@ -3,10 +3,16 @@ package br.edu.infnet.turmafirebase.repositorio
 import android.content.ContentValues.TAG
 import android.util.Log
 import android.widget.Toast
+import br.edu.infnet.turmafirebase.models.Turma
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.CollectionReference
+import com.google.firebase.firestore.DocumentReference
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.QuerySnapshot
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
 class TurmasRepository private constructor() {
@@ -15,12 +21,20 @@ class TurmasRepository private constructor() {
 
         private lateinit var auth: FirebaseAuth
 
+        private lateinit var db: FirebaseFirestore
+
+        private lateinit var colecaoTurmas: CollectionReference
+
         private var INSTANCE: TurmasRepository? = null
         fun initialize() {
             if (INSTANCE == null) {
                 INSTANCE = TurmasRepository()
 
                 auth = Firebase.auth
+
+                db = Firebase.firestore
+
+                colecaoTurmas = db.collection("turmas")
 
             }
         }
@@ -80,6 +94,14 @@ class TurmasRepository private constructor() {
         }
 
         return false
+    }
+
+    fun cadastrarTurma(turma: Turma): Task<DocumentReference> {
+        return colecaoTurmas.add(turma)
+    }
+
+    fun getTurmas() : Task<QuerySnapshot>{
+        return colecaoTurmas.get()
     }
 
 }

@@ -4,4 +4,6 @@
     <string name="email">Email</string>
     <string name="btn_login">Login</string>
     <string name="btn_sign_on">Sign On</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

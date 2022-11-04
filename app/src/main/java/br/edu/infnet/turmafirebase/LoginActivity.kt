@@ -45,7 +45,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun onLoginClick() {
-        repositorio.signOn(
+        repositorio.login(
             binding.inputEmail.text.toString(),
             binding.inputPassword.text.toString()
         )

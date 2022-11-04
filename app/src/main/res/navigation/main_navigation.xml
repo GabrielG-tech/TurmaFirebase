@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="br.edu.infnet.turmafirebase.fragments.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_turmasFragment"
+            app:destination="@id/turmasFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cadastrarTurmasFragment"
+        android:name="br.edu.infnet.turmafirebase.fragments.CadastrarTurmasFragment"
+        android:label="fragment_cadastrar_turmas"
+        tools:layout="@layout/fragment_cadastrar_turmas" />
+    <fragment
+        android:id="@+id/editarTurmasFragment"
+        android:name="br.edu.infnet.turmafirebase.fragments.EditarTurmasFragment"
+        android:label="fragment_editar_turmas"
+        tools:layout="@layout/fragment_editar_turmas" />
+    <fragment
+        android:id="@+id/turmasFragment"
+        android:name="br.edu.infnet.turmafirebase.fragments.TurmasFragment"
+        android:label="fragment_turmas"
+        tools:layout="@layout/fragment_turmas" >
+        <action
+            android:id="@+id/action_turmasFragment_to_cadastrarTurmasFragment"
+            app:destination="@id/cadastrarTurmasFragment" />
+        <action
+            android:id="@+id/action_turmasFragment_to_editarTurmasFragment"
+            app:destination="@id/editarTurmasFragment" />
+    </fragment>
+</navigation>

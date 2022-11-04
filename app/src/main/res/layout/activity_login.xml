@@ -16,14 +16,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-        >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/input_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/email" />
+
     </com.google.android.material.textfield.TextInputLayout>
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_margin="8dp"
@@ -40,6 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -60,4 +62,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
